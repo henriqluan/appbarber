@@ -8,6 +8,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { MasterComponent } from './pages/master/master.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ReportsComponent } from './pages/reports/reports.component';
+import { RolesPageGuard } from './pages/guard/roles-page.guard';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { ReportsComponent } from './pages/reports/reports.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    RolesPageGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
